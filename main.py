@@ -23,7 +23,7 @@ NS_streets = [
     'woodland pl n'
 ]
 
-NS_numbers = [ 4800, 9100 ]
+NS_numbers = [ 4800, 6100 ]
 
 EW_streets = [
     'n 48th st',
@@ -94,7 +94,6 @@ def address_in_neighborhood(location):
 
 def getLiveFeed():
     url = "http://www2.seattle.gov/fire/realtime911/getRecsForDatePub.asp?action=Today&incDate=&rad1=des"
-    print (url)
 
     parser = etree.HTMLParser()
     tree = etree.parse(url, parser)
@@ -121,10 +120,6 @@ def getLiveFeed():
             print ('FOUND ONE ' + location)
             when = datetime.strptime(dt, '%m/%d/%Y %I:%M:%S %p')
             send_message(type, units, location)
-
-#        initialProcessForIncident(incidentId, dt, level, units, location, type)
-    
-
     
 if __name__ == "__main__":
     while True:

@@ -2,5 +2,9 @@
     {
         "key":"your_IFTTT_key",
         "event":"your_IFTTT_event_name"
+    },
+    {
+        "key":"your_IFTTT_key",
+        "event":"your_IFTTT_event_name"
     }
 ]
